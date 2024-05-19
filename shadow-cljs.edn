@@ -1,0 +1,8 @@
+{:deps {:aliases [:dev]}
+ :dev-http {8021 "resources/public"}
+ :builds   {:main     {:target     :browser
+                       :output-dir "resources/public/js/main"
+                       :asset-path "/js/main"
+                       :release    {:compiler-options {:source-map true}}
+                       :modules    {:main {:init-fn test/init}}
+                                    }}}
